@@ -85,7 +85,7 @@
 - Smart routing (ML-based) : Requires data & model training
 - Advanced analytics dashboard : Can be added later
 - Mobile support : Low initial user base
-- IVR with multiple levels : Can be simple fallback first
+- IVR (Interactive Voice Response) with multiple levels : Can be simple fallback first
 
 **[Prioritization Rationale]**
 - Focus on core call flow first (making/receiving calls)

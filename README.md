@@ -153,11 +153,11 @@
 ## 7.1 CI/CD Pipeline (GitHub Actions / Azure DevOps)
 - Trigger: Push to main branch
 - Steps:
---- Build .NET Core project
---- Run unit/integration tests
---- Build Angular app
---- Publish artifacts
---- Deploy to Dev environment
+    - Build .NET Core project
+    - Run unit/integration tests
+    - Build Angular app
+    - Publish artifacts
+    - Deploy to Dev environment
 
 ## 7.2 Environments
 - Dev (Developer testing): Auto deploy (on push). 
@@ -179,7 +179,7 @@
 ## Monitoring & Bitufying
 - Application Insights / Prometheus for metrics (call success rate, latency, errors)
 - Alerts for:
---- Call drop rate > 5%
---- API latency > 1s
---- Service down
---- Queue depth > threshold
+    - Call drop rate > 5%
+    - API latency > 1s
+    - Service down
+    - Queue depth > threshold

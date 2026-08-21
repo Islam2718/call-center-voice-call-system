@@ -176,7 +176,7 @@
 - Configuration: Infrastructure as Code (Terraform/Bicep) to rebuild environment
 - DR Plan: If primary region fails, failover to secondary region (active-passive)
 
-## Monitoring & Bitufying
+## Monitoring & Notifying
 - Application Insights / Prometheus for metrics (call success rate, latency, errors)
 - Alerts for:
     - Call drop rate > 5%

@@ -69,7 +69,7 @@
  - Is on-premise deployment required, or can we use cloud?
  - Do we need real-time agent monitoring dashboards?
 
-## Section 3: MVP Definition
+## Section 3: MVP (Minium Viable Product) Definition
 **[In Scope (v1)]**
 - Agent login/logout : Basic access control
 - Incoming call handling : Core business need

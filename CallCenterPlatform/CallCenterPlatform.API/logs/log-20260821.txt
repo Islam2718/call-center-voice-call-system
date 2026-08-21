@@ -1,0 +1,50 @@
+2026-08-21 06:41:38.876 +06:00 [INF] Now listening on: http://localhost:5068
+2026-08-21 06:41:38.947 +06:00 [INF] Application started. Press Ctrl+C to shut down.
+2026-08-21 06:41:38.950 +06:00 [INF] Hosting environment: Development
+2026-08-21 06:41:38.953 +06:00 [INF] Content root path: D:\Office___Falaq Foods\CallCenterPlatform\CallCenterPlatform.API
+2026-08-21 06:41:46.125 +06:00 [WRN] Failed to determine the https port for redirect.
+2026-08-21 06:46:14.513 +06:00 [INF] Application is shutting down...
+2026-08-21 06:48:19.684 +06:00 [INF] Now listening on: http://localhost:5068
+2026-08-21 06:48:19.717 +06:00 [INF] Application started. Press Ctrl+C to shut down.
+2026-08-21 06:48:19.718 +06:00 [INF] Hosting environment: Development
+2026-08-21 06:48:19.719 +06:00 [INF] Content root path: D:\Office___Falaq Foods\CallCenterPlatform\CallCenterPlatform.API
+2026-08-21 06:48:26.095 +06:00 [WRN] Failed to determine the https port for redirect.
+2026-08-21 06:54:45.968 +06:00 [INF] Application is shutting down...
+2026-08-21 06:56:36.689 +06:00 [INF] Now listening on: http://localhost:5068
+2026-08-21 06:56:36.724 +06:00 [INF] Application started. Press Ctrl+C to shut down.
+2026-08-21 06:56:36.725 +06:00 [INF] Hosting environment: Development
+2026-08-21 06:56:36.726 +06:00 [INF] Content root path: D:\Office___Falaq Foods\CallCenterPlatform\CallCenterPlatform.API
+2026-08-21 06:56:46.129 +06:00 [WRN] Failed to determine the https port for redirect.
+2026-08-21 06:56:56.446 +06:00 [INF] Application is shutting down...
+2026-08-21 06:57:20.653 +06:00 [INF] Now listening on: http://localhost:5068
+2026-08-21 06:57:20.685 +06:00 [INF] Application started. Press Ctrl+C to shut down.
+2026-08-21 06:57:20.686 +06:00 [INF] Hosting environment: Development
+2026-08-21 06:57:20.687 +06:00 [INF] Content root path: D:\Office___Falaq Foods\CallCenterPlatform\CallCenterPlatform.API
+2026-08-21 06:57:23.165 +06:00 [WRN] Failed to determine the https port for redirect.
+2026-08-21 06:58:49.324 +06:00 [WRN] You do not have a valid license key for the Lucky Penny software MediatR. This is allowed for development and testing scenarios. If you are running in production you are required to have a licensed version. Please visit https://luckypennysoftware.com to obtain a valid license.
+2026-08-21 07:01:27.798 +06:00 [INF] Application is shutting down...
+2026-08-21 07:09:27.296 +06:00 [INF] Now listening on: http://localhost:5068
+2026-08-21 07:09:27.329 +06:00 [INF] Application started. Press Ctrl+C to shut down.
+2026-08-21 07:09:27.330 +06:00 [INF] Hosting environment: Development
+2026-08-21 07:09:27.331 +06:00 [INF] Content root path: D:\Office___Falaq Foods\CallCenterPlatform\CallCenterPlatform.API
+2026-08-21 07:09:33.333 +06:00 [WRN] Failed to determine the https port for redirect.
+2026-08-21 07:15:50.692 +06:00 [INF] Application is shutting down...
+2026-08-21 07:28:03.781 +06:00 [INF] Now listening on: http://localhost:5068
+2026-08-21 07:28:03.814 +06:00 [INF] Application started. Press Ctrl+C to shut down.
+2026-08-21 07:28:03.816 +06:00 [INF] Hosting environment: Development
+2026-08-21 07:28:03.817 +06:00 [INF] Content root path: D:\Office___Falaq Foods\CallCenterPlatform\CallCenterPlatform.API
+2026-08-21 07:28:10.924 +06:00 [WRN] Failed to determine the https port for redirect.
+2026-08-21 07:29:10.259 +06:00 [WRN] You do not have a valid license key for the Lucky Penny software MediatR. This is allowed for development and testing scenarios. If you are running in production you are required to have a licensed version. Please visit https://luckypennysoftware.com to obtain a valid license.
+2026-08-21 07:35:35.663 +06:00 [INF] Application is shutting down...
+2026-08-21 07:44:34.695 +06:00 [INF] Now listening on: http://localhost:5068
+2026-08-21 07:44:34.727 +06:00 [INF] Application started. Press Ctrl+C to shut down.
+2026-08-21 07:44:34.728 +06:00 [INF] Hosting environment: Development
+2026-08-21 07:44:34.729 +06:00 [INF] Content root path: D:\Office___Falaq Foods\CallCenterPlatform\CallCenterPlatform.API
+2026-08-21 07:44:51.197 +06:00 [WRN] Failed to determine the https port for redirect.
+2026-08-21 07:55:33.648 +06:00 [WRN] You do not have a valid license key for the Lucky Penny software MediatR. This is allowed for development and testing scenarios. If you are running in production you are required to have a licensed version. Please visit https://luckypennysoftware.com to obtain a valid license.
+2026-08-21 08:01:15.587 +06:00 [INF] Application is shutting down...
+2026-08-21 16:54:27.719 +06:00 [INF] Now listening on: http://localhost:5068
+2026-08-21 16:54:27.749 +06:00 [INF] Application started. Press Ctrl+C to shut down.
+2026-08-21 16:54:27.750 +06:00 [INF] Hosting environment: Development
+2026-08-21 16:54:27.751 +06:00 [INF] Content root path: D:\Office___Falaq Foods\call-center-voice-call-system\CallCenterPlatform\CallCenterPlatform.API
+2026-08-21 16:54:33.713 +06:00 [INF] Application is shutting down...

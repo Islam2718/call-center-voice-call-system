@@ -1,56 +1,56 @@
-### Call Center Agent
+# Call Center Agent
 
 ## Section 1: Requirement Analysis
 
-## 1.1 Business Goals
+### 1.1 Business Goals
 - Reduce dependency on third-party call center tool (cost savings, data control) 
 - Enable deep integration with existing CRM
 - Lay foundation for future AI capabilities (transcription, smart routing)
 - Support 50+ agents now, scale to 500+ later 
 
-## 1.2 User Stories
+### 1.2 User Stories
  - Agents :	Use system daily to make/receive calls
  - Supervisors : Monitor agent performance, view reports
  - Admin : Manage users, configure routing rules
  - CRM Users : Need integration with customer data
  - IT/Ops : Deploy, maintain, monitor infrastructure
 
-## 1.3 Use Cases
+### 1.3 Use Cases
  - Agent : Make/receive calls
  - Supervisor : Monitor agent performance, view reports
  - Admin : Manage users, configure routing rules
  - CRM Users : Need integration with customer data
  - IT/Ops : Deploy, maintain, monitor infrastructure
 
-## 1.4 Assumptions 
+### 1.4 Assumptions 
  - CRM exposes REST APIs for customer data
  - Network latency is within acceptable limits (<100ms)
  - Telephony provider (e.g., Twilio) is reliable and well-documented
  - Agents have decent headsets and stable internet
  - Existing hardware can handle 50 concurrent calls
 
-## 1.5 Functional Requirements
+### 1.5 Functional Requirements
  - Agent : Make/receive calls
  - Supervisor : Monitor agent performance, view reports
  - Admin : Manage users, configure routing rules
  - CRM Users : Need integration with customer data
  - IT/Ops : Deploy, maintain, monitor infrastructure
 
-## 1.6 Non-Functional Requirements
+### 1.6 Non-Functional Requirements
  - Scalability     : 50 to 500 concurrent agents 
  - Availability    : 99.9% uptime
  - Performance     : Less than 300ms for call setup 
  - Security        : HTTPS, JWT authentication, role-based access
  - User Experience : All action logged. 
 
-## 1.7 Risk Analysis
+### 1.7 Risk Analysis
  - High Risk: Security (JWT)
  - Telephony provider outage : Have a fallback provider or manual failover plan
  - CRM API rate limits : Implement caching and retry logic
  - Database bottleneck : Use read replicas and connection pooling
  - Agent training overhead : Provide clear UI and documentation
 
-## 1.8 Risk Analysis 
+### 1.8 Risk Analysis 
  - AI-based call transcription
  - Sentiment analysis
  - Predictive dialer

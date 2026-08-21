@@ -57,7 +57,7 @@
  - Mobile app
  - Multi-language IVR 
 
-### Section 2: Stakeholder Analysis (Question)
+## Section 2: Stakeholder Analysis (What have to discuss?)
  - Which telephony provider should we use? (Twilio, Vonage, AWS Connect?)
  - Does the CRM have an API? If yes, what endpoints are available? Rate limits?
  - What is the average call duration? Peak concurrent call volume?
@@ -69,8 +69,8 @@
  - Is on-premise deployment required, or can we use cloud?
  - Do we need real-time agent monitoring dashboards?
 
-### Section 3: MVP Definition
-[In Scope (v1)]
+## Section 3: MVP Definition
+**[In Scope (v1)]**
 - Agent login/logout : Basic access control
 - Incoming call handling : Core business need
 - Outgoing call from browser : Core business need
@@ -80,22 +80,22 @@
 - Admin user management:	Add/remove agents
 - CRM integration (read customer info) : Agents need context
 
-[Cut from v1]
+**[Cut from v1]**
 - AI transcription : High complexity, not critical
 - Smart routing (ML-based) : Requires data & model training
 - Advanced analytics dashboard : Can be added later
 - Mobile support : Low initial user base
 - IVR with multiple levels : Can be simple fallback first
 
-## Prioritization Rationale
+**[Prioritization Rationale]**
 - Focus on core call flow first (making/receiving calls)
 - Avoid features that require external ML/data science in v1
 - Delay features that are nice-to-have but not blocker for go-live
 - Minimize technical debt by keeping v1 simple but extensible
 
-### Section 4: System Design
+## Section 4: System Design
 
-## 4.1 High-level Components 
+### 4.1 High-level Components 
 - Agent Portal (Angular)	UI for agents to make/receive calls
 - Admin Portal (Angular)	UI for supervisors/admins
 - API Gateway (.NET Core)	Authenticate & route requests
@@ -108,7 +108,7 @@
 - Queue	(RabbitMQ / Azure Service Bus)	Async tasks (recording processing, logs)
 - Storage (Azure Blob / S3)	Store call recordings
 
-## 4.1 4.2 Data Flow (Incoming Call)
+### 4.2 Data Flow (Call Mangement)
 - Customer calls → Twilio receives it
 - Twilio sends webhook to your Telephony Service
 - Telephony Service asks Routing Service for an available agent
@@ -118,7 +118,7 @@
 - Call ends → Logs are saved to DB (async via queue)
 - CRM Integration Service may update customer call history
 
-## 4.3 Database Design (Key Tables)
+### 4.3 Database Design (Key Tables)
 - Client/Company (Id, Name, Email, Phone etc.)
 - Agents (Id, Name, Email, SkillSet, Status, LastActive)
 - Calls (Id, AgentId, CustomerPhone, Direction(In/Out), StartTime, EndTime, Duration, RecordingUrl)
@@ -126,10 +126,10 @@
 - CallLogs (Id, CallId, EventType, Timestamp, Metadata (JSON))
 - Users (Id, Name, Role (Agent/Supervisor/Admin), HashedPassword)
 
-## 4.4 Architecture Diagram (Textual)
-[image here...]
+## 4.4 Architecture Diagram
+![Architecture Diagram](./strategy.png)
 
-### Section 5: Scalability Plan (50 to 500 Agents)
+## Section 5: Scalability Plan (50 to 500 Agents)
 - Web Servers : Deploy multiple instances behind a load balancer (e.g., Azure Load Balancer)
 - Telephony Service :	Stateless → can scale horizontally
 - Routing Logic :	Use Redis for distributed caching of agent states to avoid DB hits
@@ -139,7 +139,7 @@
 - Geographic : If agents are distributed, deploy in multiple regions with traffic manager
 - Session Affinity : Use sticky sessions only if needed, otherwise stateless is better
 
-### Section 6: AI-Ready Notes 
+## Section 6: AI-Ready Notes 
 - Store raw audio: Save recordings in blob storage with a predictable naming convention (callId_timestamp.wav)
 - Event-driven: Publish "CallEnded" event to queue; AI service can subscribe later
 - Metadata enrichment: Store call context (agent, customer, duration, sentiment later) as JSON in DB
@@ -147,10 +147,9 @@
 - Avoid tight coupling: Telephony service does NOT call AI directly — use events/queues
 - Model serving: Keep separate microservice for AI inference, so it can scale independently
 
-### Section 7: Deployment Strategy
-![Architecture Diagram](./strategy.png)
+## Section 7: Deployment Strategy
 
-## 7.1 CI/CD Pipeline (GitHub Actions / Azure DevOps)
+### 7.1 CI/CD Pipeline (GitHub Actions / Azure DevOps)
 - Trigger: Push to main branch
 - Steps:
     - Build .NET Core project
@@ -159,24 +158,24 @@
     - Publish artifacts
     - Deploy to Dev environment
 
-## 7.2 Environments
+### 7.2 Environments
 - Dev (Developer testing): Auto deploy (on push). 
 - Staging (QA/UAT testing): Manual approval for deploy.
 - Production (Live users): Manual approval with rollback plan for deploy. 
 
-## 7.3 Rollback Strategy
+### 7.3 Rollback Strategy
 - Use deployment slots (Azure) or Kubernetes rolling updates
 - Keep last 2 stable images in container registry
 - If deployment fails health check → auto-rollback to previous version
 - Database rollback scripts ready if schema changes needed
 
-## 7.4 Backup & Disaster Recovery
+### 7.4 Backup & Disaster Recovery
 - Database: Daily automated backup + point-in-time restore
 - Recordings: Geo-redundant storage
 - Configuration: Infrastructure as Code (Terraform/Bicep) to rebuild environment
 - DR Plan: If primary region fails, failover to secondary region (active-passive)
 
-## Monitoring & Notifying
+### 7.5 Monitoring & Notifying
 - Application Insights / Prometheus for metrics (call success rate, latency, errors)
 - Alerts for:
     - Call drop rate > 5%
